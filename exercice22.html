@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<title>Media query</title>
+		<style>
+			#mondiv 
+			{
+				background-color: green;
+				width:300px;
+			}
+
+			#mondiv:hover {
+				
+				transition: background-color 2s linear;
+				background-color: red;
+			}
+			#mondiv2 
+			{
+				background-color: green;
+				width:300px;
+				border-radius:5px;
+			}
+
+			#mondiv2:hover {
+				
+				transition: width 2s linear, background-color 2s linear;
+				width:500px;
+				background-color:red;
+
+			}
+
+			@keyframes change {
+				50% {
+					background-color:orange;
+				}
+
+				100% {
+					background-color:green;
+				}
+			}
+			#mondiv3 
+			{
+				margin-top:50px;
+				background-color: red;
+				animation: change 2s;
+				width:100px;
+				animation-play-state: paused;
+				border-radius:20px;
+			}
+			#mondiv3:hover
+			{
+				animation: change 2s;
+				animation-play-state: running;
+			}
+
+			#mondiv3:not(hover)
+			{
+				animation-play-state: paused;
+			}
+
+			img {
+				width:200px;
+				border-radius: 10px;
+			}
+
+			img:hover {
+				transition: transform 0.5s linear;
+				transform:rotate(-20deg);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Media query</h1>
+		<div id="mondiv">
+			&nbsp;
+		</div>
+		<div id="mondiv2">
+			&nbsp;
+		</div>
+		<img src="images/ploumanach.jpg" alt="ploumanach" />
+	</body>
+
+</html>

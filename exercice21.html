@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Media query</title>
+		<style>
+			#gauche 
+			{
+				background-color: green;
+				width:50%;
+			}
+			#droite
+			{
+				background-color: red;
+				width:50%;
+			}
+			@media screen and (max-width:640px)
+			{
+				#gauche 
+				{
+					background-color: blue;
+					width:100px;
+				}
+				#droite {
+					display: block;
+					}
+				}
+			@media screen and (max-width:400px)
+			{
+				#gauche 
+				{
+					background-color: blue;
+					width:100px;
+				}
+				#droite {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Media query</h1>
+		<div id="global">
+			<div id="gauche">&nbsp;</div>
+			<div id="droite">&nbsp;</div>
+		</div>
+	</body>
+
+</html>
