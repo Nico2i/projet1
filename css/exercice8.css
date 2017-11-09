@@ -1,0 +1,41 @@
+.bleu 
+{
+	background-color:blue;
+}
+.rouge
+{
+	background-color:red;
+}
+.orange
+{
+	background-color:#FFA500;
+}
+.rose
+{
+	background-color:#E8ADAA;
+}
+.vert
+{
+	background-color:green;
+	border-style:solid dotted dashed double;
+	border-color:cyan;
+}
+div 
+{
+	min-height:50px;
+	min-width:1024px;
+}
+
+span {
+	height: 48px;
+	width: 500px;
+	/*
+	padding-right:5px;
+	padding-left:10px;
+	*/
+	padding:10px 20px 30px 40px;
+}
+
+body {
+	margin:0px;
+}

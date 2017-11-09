@@ -1,0 +1,17 @@
+body
+{
+	margin:0px;
+}
+
+.divgris
+{
+	width:600px;
+	background-color:gray;
+}
+
+img 
+{
+	width:250px;
+	height: auto;
+	float:right;
+}

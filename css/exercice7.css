@@ -1,0 +1,45 @@
+#premiersoustitre 
+{
+	color:blue;
+}
+
+.dernierp 
+{
+	font-size:8px;
+}
+
+.orange 
+{
+	color:orange;
+}
+
+a 
+{
+	color:blue;
+}
+
+a:hover 
+{
+	color:white;
+	background-color: #046D8B;
+}
+
+a:visited 
+{
+	color:red;
+}
+
+a:active 
+{
+	font-weight:bold;
+}
+
+h2, p 
+{
+	border:1px solid black;
+}
+
+a 
+{
+	border: 1px solid red;
+}

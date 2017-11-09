@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<title>Exercice 13 - formulaire</title>
+		<link rel="stylesheet" href="css/exercice13.css">
+	</head>
+	<body>
+		<form method="post" action="utilisateur.php">
+			<fieldset>
+				<legend>Formulaire</legend>
+				<label for="nom">Nom : </label>
+				<input type="text" name="nom" id="nom" placeholder="Votre nom" autocomplete="off" autofocus required/>
+				<br />
+				<label for="prenom">Pr&eacute;nom : </label>
+				<input type="text" name="prenom" id="nom"/>
+				<br />
+				<label for="sexe">Sexe : </label>
+				<input type="radio" name="sexe" value="homme" checked>Homme</input>
+				<input type="radio" name="sexe" value="femme">Femme</input>
+				<input type="radio" name="sexe" value="autre">Autre</input>
+				<br/>
+				<br />
+				<label for="departement">D&eacute;partement</label>
+				<select name="departement" id="departement">
+					<option>Cotes d'Armor</option>
+					<option>Finist&egrave;re</option>
+					<option>Ille et vilaine</option>
+					<option>Morbihan</option>
+				</select>
+				<br />
+				<br />
+				<label for="departementFormation">Formation d&eacute;partement</label>
+				<select name="departementFormation[]" id="departementFormation" size="3" multiple="true">
+					<option value="22">Cotes d'Armor</option>
+					<option value="29">Finist&egrave;re</option>
+					<option value="35">Ille et vilaine</option>
+					<option value="56">Morbihan</option>
+				</select>
+
+				<br />
+				<br />
+				<label for="rememberMe">Se souvenir de moi</label>
+				<input type="checkbox" name="rememberMe" id="rememberMe" />
+				<br />
+				<label for="tel">T&eacute;l&eacute;phone :</label>
+				<input type="tel" name="tel" pattern="([0-9]{2}/-){4}[0-9]{4}"/>
+				<br />
+				<label for="email">Email :</label>
+				<input type="email" name="email" />
+				<br />
+				<label for="url">Site perso :</label>
+				<input type="url" name="url" />
+				<br />
+				<label for="engant"># enfants :</label>
+				<input type="range" name="enfants" id="enfants" min="0" max="10" value="4" step="2"/>
+				<br />
+				<label for="couleur">Couleur</label>
+				<input type="color" name="couleur" />
+				<br />
+				<label for="date">Date</label>
+				<input type="date" name="date" />
+				<br />
+				<label for="datetime">Date</label>
+				<input type="datetime-local" name="datetime" />
+				<br/>
+				<label for="semaine">semaine</label>
+				<input type="week" name="week" />
+				<br/>
+				<label for="month">mois</label>
+				<input type="month" name="month" />
+				<br/>
+				FR tiret : <input type="text" name="telFRtiret" pattern="([0-9]{2}-){4}([0-9]{2})" required />
+				FR point : <input type="text" name="telFRpoint" pattern="([0-9]{2}\.){4}([0-9]{2})" required />
+				FR rien : <input type="text" name="telFRrien" pattern="([0-9]{2}){4}([0-9]{2})" required />
+				<br/>
+
+				<br/>
+
+				<br/>
+				<datalist id="datalist">
+					<option value="22" label="Cotes d'armor" />
+					<option value="29" label="Finistère" />
+					<option value="35" label="Ille et Vilaine" />
+					<option value="56" label="Morbihan" />
+
+				</datalist>
+				<label for="dep">D&eacute;partement en datalist :</label>
+				<input type="text" list="datalist" name="dep"/> 
+				<br/>
+				<input type="submit" value="Envoyer" />
+			</fieldset>
+		</form>
+	</body>
+	<script>
+
+	</script>
+</html>
