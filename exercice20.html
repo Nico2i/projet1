@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>CSS 3 colonne de texte</title>
+		<style>
+				@font-face {
+					font-family:'Beauty';
+					src: url('fonts/beauty.ttf'),
+						url('fonts/beauty.otf');
+				}
+				section 
+				{
+					column-count: 3;
+					column-gap:40px;
+					column-rule:0.5px solid;
+				}
+				h1 {
+					font-family:"Beauty";
+
+				}
+				p {
+					
+					margin-top:0px;
+					padding-top:0px;
+				}
+				@font-face {
+					font-family:"Beauty";
+					src: url('fonts/beauty.ttf');
+				}
+
+				.montableau tr:last-child
+				{
+					font-weight:bold;
+				}
+
+				.montableau tr:first-child
+				{
+					font-weight:bold;
+				}
+
+				.montableau tr:nth-child(2n) 
+				{
+					/* (even) */
+					background-color:grey;
+				}
+
+				.montableau tr:nth-child(2n+1) 
+				{
+					/* (odd) */
+					background-color:red;
+				}
+
+		</style>
+	</head>
+	<body>
+			<table class="montableau">
+				<tr>
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+				<tr>
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+				<tr>
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+				<tr>
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+				<tr>
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+				<tr>
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+				<tr>
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+				<tr>
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+				<tr>
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+				<tr id="dernierligne">
+					<td>COL 1</td>
+					<td>COL 2</td>
+					<td>COL 3</td>
+				</tr>
+
+			</table>
+		</section>
+	</body>
+</html>
