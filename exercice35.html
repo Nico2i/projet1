@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Javascript</title>
+		<meta charsert="utf-8"/>
+		<style>
+		</style>
+	</head>
+	<body>
+		<h1>Données formulaire en storage</h1>
+			<label for="nom">Nom :</label>
+			<input type="text" id="nom" name="nom" />
+			<label for="prenom">Prénom :</label>
+			<input type="text" id="prenom" name="prenom" />
+			<button onclick="implementTable()">Ajouter au tableau</button>
+
+		<table>
+			<thead>
+				<tr>
+					<td>Prénom</td>
+					<td>Nom</td>
+				</tr>
+			</thead>
+			<tbody id="info">
+			</tbody>
+		</table>
+		<script type="text/javascript">
+			if(typeof (localStorage) != null)
+			{
+				//ok localStorage supporté
+				
+				var implementTable = function() 
+				{
+					if(localStorage['utilisateur'] != null) 
+					{
+						var users = JSON.parse(localStorage['utilisateur']);
+						for(var i=0; i < users.length;i++ )
+						{
+							var info = document.getElementById("info");
+							info.innerHTML='<tr><td>'+ users[i].nom +'</td><td>'+users[i].prenom+'</td></tr>';
+						}
+					}
+					else 
+					{
+						var nom = document.getElementById("nom").value;
+						var prenom = document.getElementById("prenom").value;
+						localStorage['utilisateur'] = JSON.stringify([{"nom":nom, "prenom":prenom}]);
+						var users = JSON.parse(localStorage['utilisateur']);
+						console.log(users);
+						for(var i=0; i < users.length;i++ )
+						{
+							console.log(users[i].nom);
+							var info = document.getElementById("info");
+							info.innerHTML='<tr><td>'+ users[i].nom +'</td><td>'+users[i].prenom+'</td></tr>';
+						}
+					}
+				}
+				
+			}
+			else {
+				console.log("localStorage non supporté");	
+			}
+
+		</script>
+	</body>
+
+</html>

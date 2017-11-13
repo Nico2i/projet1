@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Javascript</title>
+		<meta charsert="utf-8"/>
+		<style>
+		</style>
+	</head>
+	<body>
+		<h1>localStorage</h1>
+		<p>C'est la <span id="x">x</span>eme fois que vous vous connectez</p>
+		<script type="text/javascript">
+			if(typeof (localStorage) != null)
+			{
+				//ok localStorage supporté
+				/*
+				console.log(localStorage['utilisateurCourant']);	
+				localStorage['utilisateurCourant']="felix";
+				console.log(localStorage['utilisateurCourant']);
+				delete localStorage['utilisateurCourant'];
+				*/
+				var cmpt = localStorage['compteur'];
+				localStorage['compteur']=++cmpt;
+				console.log("c'est la "+ localStorage['compteur'] +" fois que vous vous connectez");
+
+				
+			}
+			else {
+				console.log("localStorage non supporté");	
+			}
+			var nbVisite = 0; 
+			function majCompteurVisite(nbVisite) {
+					var compteur = document.getElementById("x");
+					compteur.innerHTML = nbVisite;
+				}
+
+			function majNbVisites() 
+			{
+				if(typeof (localStorage) != null ) {
+					
+					if( localStorage["nbVisites"] != null )
+						nbVisites = localStorage["nbVisites"];
+					
+
+					localStorage["nbVisites"] = ++nbVisite;
+					majCompteurVisite(nbVisite);
+				}
+			}
+
+			window.onload = function() {
+				majNbVisites();
+			} 
+		</script>
+	</body>
+
+</html>

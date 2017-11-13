@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Javascript</title>
+		<meta charsert="utf-8"/>
+		<style>
+		</style>
+	</head>
+	<body>
+		<h1>SVG</h1>
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+			</svg>
+		<h1>CANVAS</h1>
+			<canvas id="canvas" width="1000" height="1000"></canvas>
+
+		<script type="text/javascript">
+			//on réc^père notre élément canvas
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext("2d");
+
+			// on créer une image en javascript
+			var monImage = new Image();
+			monImage.src = "images/ploumanach.jpg";
+			monImage.onload = function() {
+				context.drawImage(monImage, 0, 0); //image,x,y
+				context.drawImage(monImage, 50,50,100,100);//image,x,y, largeur, hauteur
+
+				/*
+				1 argument : l'image
+				4 arguments : source
+				4 arguments : destination
+
+				*/
+				context.drawImage(monImage, 250,250,100,100,50,50,50,50);//image,x,y, largeur, 
+			}
+			/*
+			var mygradient = context.createLinearGradient(0,0,0,255);
+			mygradient.addColorStop(0,"black");
+			mygradient.addColorStop(1,"white");
+			context.fillStyle=mygradient;
+			context.fillRect(0,0,300,255);
+			
+			*/
+
+
+		</script>
+	</body>
+
+</html>

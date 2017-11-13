@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>Javascript</title>
+		<meta charsert="utf-8"/>
+		<style>
+			img {
+				width:200px;
+			}
+			.hidden {
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>SVG</h1>
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+			</svg>
+		<h1>CANVAS</h1>
+			<canvas id="canvas" width="1000" height="1000"></canvas>
+			<canvas id="canvas2" width="1000" height="1000"></canvas>
+		<script type="text/javascript">
+			//on réc^père notre élément canvas
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext("2d");
+
+			//on lui demande de me dessiner un rectangle et de le remplir x,y, width, height
+			context.fillRect(50,25,150,100);
+			context.strokeStyle = "rgb(255,0,0)"; 
+			context.strokeRect(300,255,150,100);
+
+			var canvas2 = document.getElementById("canvas2");
+			var context2 = canvas2.getContext("2d");
+
+			for (var x = 0.5; x < 500; x+=10) {
+				context2.moveTo(x,0);
+				context2.lineTo(x,375);
+			}
+
+			for (var y = 0.5; y < 375; y+=10) {
+				context2.moveTo(0,y);
+				context2.lineTo(500,y);
+			}
+			context2.strokeStyle = "#eee";
+			context2.stroke();
+
+			context2.font = "bold 12px sans-serif";
+			context2.fillText("x",248,43);
+			context2.fillText("y",58,170);
+
+			context2.beginPath();
+			context2.moveTo(0,40);
+			context2.lineTo(243,40);
+
+			context2.moveTo(256,40);//on déplace le crayon en x,y 
+			context2.lineTo(500,40);//il se déplace jusque x,y en traçant le trait
+
+			context2.lineTo(490,30);
+			context2.moveTo(500,40);
+			context2.lineTo(490,50);
+
+			context2.moveTo(60,0);
+			context2.lineTo(60,160);
+			context2.moveTo(60,170);
+			context2.lineTo(60,375);
+			context2.lineTo(70,365);
+			context2.moveTo(50,365);
+			context2.lineTo(60,375);
+			context2.strokeStyle = "black";
+			context2.stroke();
+
+			context2.beginPath();
+			context2.fillText("(0,0)",10,20);
+			context2.fillText("(375,500)",430,360);
+
+			
+
+			
+
+		</script>
+	</body>
+
+</html>
