@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>
+			Balises générales
+		</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<p id="p1">Ceci est mon P1</p>
+		<button id="monBouton">Valider</button>
+		<button id="monBoutonInvisible">Invisible</button>
+
+		<script type="text/javascript">
+			$("#monBouton").click(function() {
+				$("p").html("P1 cliqué");
+			});
+
+			$("#monBoutonInvisible").click(function() {
+				if($("p").hasClass("invisible")) {
+					$("p").removeClass("invisible");
+					$("#monBoutonInvisible").html("Invisible");
+				}
+				else {
+					$("p").addClass("invisible");
+					$("#monBoutonInvisible").html("Visible");
+				}
+				
+			})
+
+		</script>
+	</body>
+</html>
