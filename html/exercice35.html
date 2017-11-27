@@ -43,6 +43,7 @@
 					{
 						var nom = document.getElementById("nom").value;
 						var prenom = document.getElementById("prenom").value;
+						console.log(nom+" "+prenom);
 						localStorage['utilisateur'] = JSON.stringify([{"nom":nom, "prenom":prenom}]);
 						var users = JSON.parse(localStorage['utilisateur']);
 						console.log(users);

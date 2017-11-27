@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>En tete de ma page</title>
+			<meta charset="utf-8" />
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.js"
+		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		  crossorigin="anonymous"></script>	
+		<script type="text/javascript" src="js/fonctions2.js">
+
+		</script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style>
+			#panel-gauche {
+				float: left;
+				width: 400px;
+			}
+			#panel-droite {
+				float: right;
+				width: 600px;
+	
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h1>JS Web Storage Pratique</h1>
+		
+		<div id="panel-gauche">
+			<label for="nom">Nom</label>
+			<input type="text" name="nom" id="nom"/> <br />
+			<label for="prenom">Prénom</label>
+			<input type="text" name="prenom" id="prenom"/>
+			<button id="clic">Ajouter</button>
+		</div>
+		
+		<div id="panel-droite">
+			<table>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Nom</th>
+						<th>Prenom</th>
+						<th>Edition</th>
+					</tr>
+				</thead>
+				<tbody id="bodytab">
+					<tr><td colspan="2">Pas de données</td></tr>
+				</tbody>
+		</div>
+		
+		<script type="text/javascript" src="js/exercice9.js"></script>
+		
+	</body>
+	
+	
+
+</html>
