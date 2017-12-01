@@ -39,3 +39,17 @@ echo substr_replace($msg, "felix", 8, 5);
 echo str_replace( "#nom#", "felix", $msg);
 echo str_replace( "#nom#", "felix", $msg, $nb);
 echo $nb;
+
+echo "taille de ma chaine: " .strlen($str)."\n";
+echo "Nombre de '.' dans ma chaine :". str_count($str, ".")."\n";
+
+$a = "a";
+$b = "A";
+$c = "b";
+$d = "B";
+
+$cmp1 =  ($a == $b) ? "Vrai" : "Faux";
+echo "-". $comp1 . "\n";
+echo "-". ($a === $b) ."\n";
+echo "-". (strcmp($a, $b)) ."\n";
+echo "-". (strcmp($a, $c)) ."\n";
